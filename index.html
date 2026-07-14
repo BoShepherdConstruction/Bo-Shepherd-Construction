@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bo Shepherd Construction | Luxury Residential Roofing, Siding & Windows</title>
+    <!-- Google Fonts for Web 2.0 Luxury Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* CSS RESET & VARIABLES */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary-blue: #0b2545;
+            --luxury-red: #c3073f;
+            --accent-blue: #134074;
+            --light-bg: #f8f9fa;
+            --dark-bg: #08121e;
+            --gold-star: #f1c40f;
+            --white: #ffffff;
+            --text-dark: #222222;
+            --text-light: #f1f1f1;
+            --transition-speed: 0.4s;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* NAVIGATION BAR */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(11, 37, 69, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--luxury-red);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: var(--transition-speed);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+            border-radius: 5px;
+            border: 1px solid var(--luxury-red);
+            transition: transform var(--transition-speed);
+        }
+
+        .logo-container:hover .logo-img {
+            transform: scale(1.05) rotate(-2deg);
+        }
+
+        .logo-text {
+            color: var(--white);
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .logo-text span {
+            color: var(--luxury-red);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: all var(--transition-speed) ease-in-out;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: var(--luxury-red);
+            transition: all var(--transition-speed);
+            transform: translateX(-50%);
+        }
+
+        nav ul li a:hover::after {
+            width: 80%;
+        }
+
+        nav ul li a:hover {
+            color: var(--luxury-red);
+        }
+
+        /* HERO SECTION */
+        #hero {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(11, 37, 69, 0.85), rgba(195, 7, 63, 0.4)), url('https://t3.ftcdn.net/jpg/02/90/51/26/360_F_290512663_zep6YJ0mCgnlJY2tE8ooPVNP6xhEu0Gk.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+            margin-top: 0;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            animation: fadeInUp 1.5s ease;
+        }
+
+        .hero-content h1 {
+            font-size: 3.8rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8);
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 35px;
+            letter-spacing: 1px;
+            text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+
+        .btn-luxury {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--luxury-red), #e63946);
+            color: var(--white);
+            padding: 15px 40px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-radius: 50px;
+            box-shadow: 0 10px 20px rgba(195, 7, 63, 0.4);
+            transition: all var(--transition-speed);
+            border: 2px solid transparent;
+        }
+
+        .btn-luxury:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(195, 7, 63, 0.6);
+            border-color: var(--white);
+        }
+
+        /* SECTIONS COMMON STYLES */
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: var(--primary-blue);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-blue), var(--luxury-red));
+            border-radius: 2px;
+        }
+
+        /* ABOUT SECTION */
+        #about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .about-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.8s ease;
+        }
+
+        .about-image-wrapper:hover .about-img {
+            transform: scale(1.05);
+        }
+
+        .about-image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border: 2px solid var(--luxury-red);
+            border-radius: 5px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .about-content h3 {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .highlight-bar {
+            border-left: 4px solid var(--luxury-red);
+            padding-left: 15px;
+            font-style: italic;
+            margin: 25px 0;
+            font-weight: 500;
+        }
+
+        /* SERVICES SECTION */
+        #services-container {
+            background-color: var(--light-bg);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: all var(--transition-speed) cubic-bezier(0.165, 0.84, 0.44, 1);
+            border-bottom: 4px solid var(--primary-blue);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-bottom-color: var(--luxury-red);
+        }
+
+        .service-img-holder {
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-img-holder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .service-card:hover .service-img-holder img {
+            transform: scale(1.1);
+        }
+
+        .service-info {
+            padding: 30px;
+        }
+
+        .service-info h3 {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .service-info p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        /* REVIEWS SECTION */
+        #reviews-container {
+            background: linear-gradient(135deg, rgba(11, 37, 69, 0.98), rgba(195, 7, 63, 0.95)), url('https://t3.ftcdn.net/jpg/02/90/51/26/360_F_290512663_zep6YJ0mCgnlJY2tE8ooPVNP6xhEu0Gk.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: var(--white);
+        }
+
+        #reviews-container .section-header h2 {
+            color: var(--white);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .review-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 35px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            transition: transform var(--transition-speed);
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .stars {
+            color: var(--gold-star);
+            margin-bottom: 15px;
+        }
+
+        .review-text {
+            font-size: 1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .reviewer-info h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            color: var(--white);
+        }
+
+        .reviewer-info span {
+            font-size: 0.85rem;
+            color: #ccc;
+        }
+
+        /* CONTACT SECTION */
+        #contact {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+        }
+
+        .contact-details h3 {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            border: 2px solid var(--luxury-red);
+            transition: all var(--transition-speed);
+        }
+
+        .contact-item:hover .contact-icon {
+            background-color: var(--luxury-red);
+            transform: rotateY(180deg);
+        }
+
+        .contact-text h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .contact-text p, .contact-text a {
+            color: #555;
+            text-decoration: none;
+            transition: color var(--transition-speed);
+        }
+
+        .contact-text a:hover {
+            color: var(--luxury-red);
+        }
+
+        /* LUXURY PREMIUM FORM */
+        .contact-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--luxury-red);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            transition: border-color var(--transition-speed);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        /* FOOTER SECTION */
+        footer {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            padding: 80px 20px 30px 20px;
+            border-top: 5px solid var(--luxury-red);
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-about h3 {
+            color: var(--white);
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-about h3 span {
+            color: var(--luxury-red);
+        }
+
+        .footer-about p {
+            color: #b0b0b0;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-links h3, .footer-map h3 {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-links h3::after, .footer-map h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--luxury-red);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links ul li a {
+            color: #b0b0b0;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all var(--transition-speed);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--luxury-red);
+            padding-left: 5px;
+        }
+
+        .map-wrapper {
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid var(--accent-blue);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .map-wrapper iframe {
+            width: 100% !important;
+            height: 200px !important;
+            display: block;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 30px;
+            border-top: 1px solid #222;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        /* KEYFRAME ANIMATIONS */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* MOBILE RESPONSIVENESS */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul {
+                gap: 15px;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            #about, #contact {
+                grid-template-columns: 1fr;
+            }
+            section {
+                padding: 60px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION HEADER -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo-container">
+                <!-- Exact Requested Profile Logo -->
+                <img src="https://www.americasmallbiz.com/logos/profile/limage-30610-460-photo.webp" alt="Bo Shepherd Construction Logo" class="logo-img">
+                <span class="logo-text">Bo Shepherd <span>Construction</span></span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services-container">Services</a></li>
+                    <li><a href="#reviews-container">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION WITH CUSTOM BACKGROUND -->
+    <div id="hero">
+        <div class="hero-content">
+            <h1>Premium Construction & Exterior Solutions</h1>
+            <p>Serving Warsaw and North Webster, Indiana with flawless general contracting, high-caliber roofing, modern siding, and energy-efficient windows.</p>
+            <a href="#contact" class="btn-luxury">Get A Free Estimate</a>
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <main>
+        <section id="about">
+            <div class="about-image-wrapper">
+                <!-- Custom Requested About Image -->
+                <img src="https://t3.ftcdn.net/jpg/03/31/59/82/360_F_331598222_tadTdFeI0WxEmyGFoWuMTlEK1jNu2Xhl.jpg" alt="Beautifully Renovated Home Exterior" class="about-img">
+            </div>
+            <div class="about-content">
+                <div class="section-header" style="text-align: left; margin-bottom: 30px;">
+                    <h2 style="font-size: 2.2rem;">Our Story</h2>
+                </div>
+                <h3>Dedicated Craftsmanship & Quality Upgrades</h3>
+                <p>Bo Shepherd Construction is a premier general contractor serving the Warsaw and North Webster, Indiana area. We are focused on helping homeowners preserve, improve, and protect their investments with top-tier materials and impeccable workmanship at a fair price.</p>
+                <div class="highlight-bar">
+                    "We are a solid, professional fit when you want one experienced crew that can confidently handle both heavy-duty exterior replacements and specialized interior improvements."
+                </div>
+                <p>From complete premium roofing installations to detailed trim design and gorgeous modern siding, we coordinate all projects seamlessly so you can sit back and watch your dream renovation come together.</p>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <div id="services-container">
+            <section id="services">
+                <div class="section-header">
+                    <h2>Our Specialized Services</h2>
+                </div>
+                <div class="services-grid">
+                    <!-- Service 1: Roofing -->
+                    <div class="service-card">
+                        <div class="service-img-holder">
+                            <img src="https://t4.ftcdn.net/jpg/00/03/16/19/360_F_3161906_R8NyjfDWUwUoG9pVx9oDAdRPRlaF4K.jpg" alt="Roofing Construction">
+                        </div>
+                        <div class="service-info">
+                            <h3>Roofing Services</h3>
+                            <p>Protect your home with strong, weather-resistant roofs. We specialize in new architectural shingles, prompt leak repairs, structural tear-offs, and complete high-performance asphalt and metal roof installations.</p>
+                            <a href="#contact" class="btn-luxury" style="padding: 10px 25px; font-size: 0.85rem;">Learn More</a>
+                        </div>
+                    </div>
+                    <!-- Service 2: Siding -->
+                    <div class="service-card">
+                        <div class="service-img-holder">
+                            <img src="https://avatars.mds.yandex.net/get-ydo/11397567/2a0000018bf460b1e987d9f21dbaa2e354b6/diploma" alt="Modern Siding Installation">
+                        </div>
+                        <div class="service-info">
+                            <h3>Siding Services</h3>
+                            <p>Enhance your curb appeal and lower energy bills with beautiful, durable siding. We offer premium vinyl siding, fiber cement siding, and customized trims that protect your home from the tough Indiana seasons.</p>
+                            <a href="#contact" class="btn-luxury" style="padding: 10px 25px; font-size: 0.85rem;">Learn More</a>
+                        </div>
+                    </div>
+                    <!-- Service 3: Windows -->
+                    <div class="service-card">
+                        <div class="service-img-holder">
+                            <img src="https://i.ytimg.com/vi/pJDA8bPRDlE/maxresdefault.jpg" alt="Window Framing Install">
+                        </div>
+                        <div class="service-info">
+                            <h3>Windows Services</h3>
+                            <p>Replace old, drafty windows with custom, highly insulated modern window options. Our team performs precise framing, flashing, and window adjustments to keep your interior warm and noise-free.</p>
+                            <a href="#contact" class="btn-luxury" style="padding: 10px 25px; font-size: 0.85rem;">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- CUSTOMER REVIEWS SECTION -->
+        <div id="reviews-container">
+            <section id="reviews">
+                <div class="section-header">
+                    <h2>What Our Clients Say</h2>
+                </div>
+                <div class="reviews-grid">
+                    <!-- Review 1 -->
+                    <div class="review-card">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"Rodney did my roof and some other projects. He was prompt, respectful, left the site cleaner than he found it, and offered extremely fair prices for such amazing detail."</p>
+                        <div class="reviewer-info">
+                            <h4>Dan S.</h4>
+                            <span>Warsaw, IN</span>
+                        </div>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"Everything went great and was completed in just one day. They kept a professional workflow and completely transformed our damaged exterior. Highly recommended!"</p>
+                        <div class="reviewer-info">
+                            <h4>Local Homeowner</h4>
+                            <span>Milford, IN</span>
+                        </div>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="review-card">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"Take the stress out of your next home exterior build. Their attention to detail, complete insurance coverage, and direct communication is exactly what a contractor should offer."</p>
+                        <div class="reviewer-info">
+                            <h4>Sarah K.</h4>
+                            <span>North Webster, IN</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact">
+            <div class="contact-details">
+                <div class="section-header" style="text-align: left; margin-bottom: 35px;">
+                    <h2 style="font-size: 2.2rem;">Connect With Us</h2>
+                </div>
+                <h3>Let's Discuss Your Project</h3>
+                <p style="margin-bottom: 40px; color: #555;">Ready to elevate your home? Contact us today to arrange an on-site consultation or request a customized estimate from our contracting experts.</p>
+                
+                <!-- Phone -->
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h4>Call or Text us</h4>
+                        <p><a href="tel:5745514352">(574) 551-4352</a></p>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h4>Email</h4>
+                        <p><a href="mailto:info@boshepherdconstruction.com">info@boshepherdconstruction.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h4>Our Location</h4>
+                        <p>North Webster & Warsaw, Indiana 46582</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Luxury Contact Form -->
+            <div class="contact-form">
+                <h3 style="margin-bottom: 25px; color: var(--primary-blue); font-size: 1.6rem;">Schedule Free Estimate</h3>
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! We will get back to you shortly.');">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="(574) 123-4567" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="msg">Project Scope</label>
+                        <textarea id="msg" class="form-control" rows="4" placeholder="Briefly describe your roofing, siding, or window project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-luxury" style="width: 100%; border: none; cursor: pointer;">Send Details</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-about">
+                <h3>Bo Shepherd <span>Construction</span></h3>
+                <p>Durable home solutions, roofing replacements, siding setups, and custom residential upgrades across Kosciusko and surrounding Indiana counties.</p>
+                <p style="font-weight: 600; color: var(--white);"><i class="fa-solid fa-shield-halved" style="color: var(--luxury-red); margin-right: 8px;"></i> Fully Insured General Contractor</p>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i> About Us</a></li>
+                    <li><a href="#services-container"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i> Construction Services</a></li>
+                    <li><a href="#reviews-container"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i> Homeowner Reviews</a></li>
+                    <li><a href="#contact"><i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i> Contact & Estimates</a></li>
+                    <!-- GMB Link styled elegantly within footer navigation -->
+                    <li>
+                        <a href="https://maps.google.com/?cid=8134763442650895481" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-map-location-dot" style="color: var(--luxury-red);"></i> <strong>Find us on Google Maps</strong>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Footer Embedded GMB Map -->
+            <div class="footer-map">
+                <h3>Our Location Map</h3>
+                <div class="map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47997.04701624529!2d-85.836764!3d41.247578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x881685c58fecaccb%3A0x70e473ac6e2d5479!2sBo%20Shepherd%20Construction!5e0!3m2!1sen!2s!4v1784047953123!5m2!1sen!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bo Shepherd Construction. All Rights Reserved. Fully Insured General Contractor.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
